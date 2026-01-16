@@ -1,10 +1,12 @@
+const basePath = process.env.NODE_ENV === "production" ? "/alex-doss-mobile-mechanic" : "";
+
 export default function Hero() {
   return (
     <section className="relative overflow-hidden">
       {/* Background image */}
       <div
         className="absolute inset-0 bg-center bg-cover"
-        style={{ backgroundImage: "url(/hero-bg.png)" }}
+        style={{ backgroundImage: `url(${basePath}/hero-bg.png)` }}
       />
       {/* Dark overlay for readable copy */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-black/20" />
